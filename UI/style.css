@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: whitesmoke;
+}
+
+#navButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#decisionControls {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+#timeVal {
+  font-size: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+
+#mainHeader {
+  font-family: "Lobster";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+}
+
+h3 {
+  position: absolute;
+  top: 300px;
+  left: 740px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: white;
+  font-weight: bold;
+}
+
+img {
+  height: 200px;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: -150px;
+  left: 25px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 500px;
+  font-size: 30px;
+  font-weight: bold;
+}
