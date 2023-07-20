@@ -12,7 +12,7 @@ body {
 
 #mainHeader {
   position: relative;
-  margin-top: 100px;
+  margin-top: 80px;
   right: 150px;
   color: white;
   font-weight: bold;
@@ -26,16 +26,37 @@ body {
 
 footer {
   position: relative;
-  bottom: 250px;
+}
+
+.timer-selection {
+  font-size: 28px;
+  position: absolute;
+  top: 515px;
+  left: 450px;
+  color: white;
+  font-weight: bold;
+}
+
+.timer-selection-header {
+  font-family: "Lobster";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+  position: absolute;
+  left: 480px;
+  top: 440px;
+  padding-top: 15px;
 }
 
 .pomodoro-clock {
   position: relative;
-  top: 200px;
+  top: 140px;
   background-color: white;
   margin-right: 500px;
   margin-left: 500px;
   border-radius: 10px;
+  width: 350px;
 }
 .pomodoro-controls {
   margin-left: 500px;
@@ -43,8 +64,8 @@ footer {
   border-radius: 10px;
   padding: 40px 30px;
   margin-right: 500px;
-  position: relative;
-  top: 160px;
+  position: absolute;
+  top: 300px;
 }
 .pomodoro-controls button {
   background-color: red;
@@ -99,12 +120,11 @@ h3 {
 }
 
 footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 500px;
   font-size: 30px;
   font-weight: bold;
   color: white;
   font-weight: bold;
+  position: absolute;
+  top: 570px;
+  left: 450px;
 }

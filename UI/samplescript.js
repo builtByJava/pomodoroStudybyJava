@@ -22,7 +22,7 @@ function countdown() {
 
   if (seconds <= 0) {
     //if time ends
-    clearInterval(startInterval);
+    seconds = 300; //5min break
   }
 }
 
@@ -38,5 +38,6 @@ pauseButton.addEventListener("click", function () {
 });
 
 resetButton.addEventListener("click", function () {
-  
+  seconds = 1500; //resetting to 25 mins
+  countdown();
 });
