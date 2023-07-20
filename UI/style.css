@@ -5,12 +5,61 @@
 
 body {
   background-color: whitesmoke;
+  background-image: url("https://images.unsplash.com/photo-1621332606136-7e66f02dade1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHBvbW9kb3JvfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-#navButtons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#mainHeader {
+  position: relative;
+  margin-top: 100px;
+  right: 150px;
+  color: white;
+  font-weight: bold;
+}
+#menuIcon {
+  font-size: 40px;
+  position: relative;
+  top: 30px;
+  left: 250px;
+}
+
+footer {
+  position: relative;
+  bottom: 250px;
+}
+
+.pomodoro-clock {
+  position: relative;
+  top: 200px;
+  background-color: white;
+  margin-right: 500px;
+  margin-left: 500px;
+  border-radius: 10px;
+}
+.pomodoro-controls {
+  margin-left: 500px;
+  border: 1px solid red;
+  border-radius: 10px;
+  padding: 40px 30px;
+  margin-right: 500px;
+  position: relative;
+  top: 160px;
+}
+.pomodoro-controls button {
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  display: inline;
+  padding: 16px 16px;
+}
+
+.pomodoro-controls h3 {
+  color: red;
+  position: absolute;
+  left: 500px;
+  font-weight: bold;
 }
 
 #decisionControls {
@@ -35,6 +84,8 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 60px;
+  position: absolute;
+  left: 150px;
 }
 
 h3 {
@@ -47,21 +98,13 @@ h3 {
   font-weight: bold;
 }
 
-img {
-  height: 200px;
-  width: 200px;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  top: -150px;
-  left: 25px;
-}
-
 footer {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 500px;
   font-size: 30px;
+  font-weight: bold;
+  color: white;
   font-weight: bold;
 }

@@ -1,32 +1,42 @@
-//variables assignments
-const twentyFive = document.querySelector("25min");
-const fortyFive = document.querySelector("45min");
-const seventyOne = document.querySelector("71min");
+//variables
+let seconds = 1500;
+let interval = null;
+
+const startButton = document.querySelector("#startButton");
+const pauseButton = document.querySelector("#pauseButton");
+const resetButton = document.querySelector("#resetButton");
 
 //functions
-function countdown(counterId) {
-  let newCounterId = parseInt(counterId);
-  let elapsedSeconds = 59;
-  let newElapsedSeconds = parseInt(elapsedSeconds);
-  let intervalSetter = setInterval(function () {
-    document.getElementById("timeVal").innerHTML =
-      newCounterId + ":" + newElapsedSeconds;
-    console.log(newElapsedSeconds--);
-    if (newElapsedSeconds == 0) {
-      newCounterId--;
-      newElapsedSeconds += 59;
-    }
-    if (counterId == 0 && newElapsedSeconds == 0) {
-      alert("Time for a break!");
-      resetInterval(intervalSetter);
-    }
-  }, 1000);
+
+function countdown() {
+  let minutes = Math.floor(seconds / 60);
+  let remainingSeconds = seconds % 60;
+  let hours = Math.floor(seconds / 3600);
+  minutes = minutes < 10 ? "0" + minutes : minutes;
+  remainingSeconds =
+    remainingSeconds < 10 ? "0" + remainingSeconds : remainingSeconds;
+  hours = hours < 10 ? "0" + hours : hours;
+  timeVal.innerText = hours + ":" + minutes + ":" + remainingSeconds;
+  //clock starts
+  seconds--;
+
+  if (seconds <= 0) {
+    //if time ends
+    clearInterval(startInterval);
+  }
 }
 
-//functions
+//event listeners
+startButton.addEventListener("click", function () {
+  //start clock by calling countdown method
+  interval = setInterval(countdown, 1000);
+});
 
-//Event handlers
+pauseButton.addEventListener("click", function () {
+  //pause clock
+  clearInterval(interval);
+});
 
-twentyFive.addEventListener("click", countdown);
-fortyFive.addEventListener("click", countdown);
-seventyOne.addEventListener("click", countdown);
+resetButton.addEventListener("click", function () {
+  
+});

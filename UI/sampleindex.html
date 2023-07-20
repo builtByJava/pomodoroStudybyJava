@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TomatoTime! - Pomodoro Timer</title>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <script defer src="samplescript.js"></script>
     <link rel="stylesheet" href="style.css" />
     <link
@@ -19,56 +20,24 @@
     />
   </head>
   <body>
-    <section id="main">
+    <div class="pomodoro-timer-container">
       <h1 id="mainHeader">Pomodoro Timer</h1>
-
-      <div class="container" id="navButtons">
-        <div class="row">
-          <div class="col">
-            <button
-              class="button"
-              id="25min"
-              value="25"
-              onclick="countdown(this.id)"
-            >
-              25 Minutes
-            </button>
-          </div>
-          <div class="col">
-            <button
-              class="button"
-              id="45min"
-              value="45"
-              onclick="countdown(this.id)"
-            >
-              45 Minutes
-            </button>
-          </div>
-          <div class="col">
-            <button
-              class="button"
-              id="71min"
-              value="71"
-              onclick="countdown(this.id)"
-            >
-              71 Minutes
-            </button>
-          </div>
-          <p id="timeVal"></p>
-          <div class="container" id="decisionControls">
-          <button type="button">Stop Timer</button>
-          <button type="button">Restart Timer</button>
-          <button type="button">Reset</button>
-          </div>
-          
-        </div>
+      <ion-icon name="menu" id="menuIcon"></ion-icon>
+      <div class="pomodoro-clock">
         
-          
-    </section>
-    <section>
-      
-        <img src="https://images.unsplash.com/photo-1627888086271-6c8546b2977c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1619&q=80">
-    </section>
+
+        <p id="timeVal"></p>
+      </div>
+      <br>
+      <div class="pomodoro-controls">
+        <button
+        id="startButton"
+      ><ion-icon name="play"></ion-icon>Start</button>
+  <button id="pauseButton"><ion-icon name="pause"></ion-icon>Pause</button>
+  <button class="pomodoro-reset-button" id="resetButton"><ion-icon name="refresh"></ion-icon>Reset</button>
+  </div>
+  
+  
   </body>
   <footer>Coded by Warcholak Labs 2023 &copy;</footer>
 </html>
