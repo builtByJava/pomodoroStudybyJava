@@ -39,7 +39,7 @@ function countdown() {
 //event listeners
 startButton.addEventListener("click", function () {
   //start clock by calling countdown method, each session -- 25 mins
-  seconds = 10; //25 min session
+  seconds = 1500; //25 min session
   interval = setInterval(countdown, 1000);
   totalPSessions += sessionCount + 1;
 });
