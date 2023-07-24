@@ -29,9 +29,6 @@ function countdown() {
     //if total Pomodoro sessions are more than 4 , then restart cycle count
     if (totalPSessions >= 4) {
       totalPSessions = 0;
-    } else {
-      //after each 25 min cycle, store the count. Based on the count it will determine the break number
-      totalPSessions += sessionCount + 1;
     }
     //display on UI total pomodoro sessions
     totalPomodoros.innerText = totalPSessions;
@@ -42,8 +39,9 @@ function countdown() {
 //event listeners
 startButton.addEventListener("click", function () {
   //start clock by calling countdown method, each session -- 25 mins
-  seconds = 1500; //25 min session
+  seconds = 10; //25 min session
   interval = setInterval(countdown, 1000);
+  totalPSessions += sessionCount + 1;
 });
 
 pauseButton.addEventListener("click", function () {
