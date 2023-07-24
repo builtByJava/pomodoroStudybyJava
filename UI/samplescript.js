@@ -27,7 +27,7 @@ function countdown() {
   if (seconds < 0) {
     //if time ends
     //if total Pomodoro sessions are more than 4 , then restart cycle count
-    if (totalPSessions >= 4) {
+    if (totalPSessions > 4) {
       totalPSessions = 0;
     }
     //display on UI total pomodoro sessions
