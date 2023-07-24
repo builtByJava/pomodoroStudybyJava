@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TomatoTime! - Pomodoro Timer</title>
+    <title>Pomodoro Timer</title>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <script defer src="samplescript.js"></script>
     <link rel="stylesheet" href="style.css" />
@@ -14,6 +14,7 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link
       href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
       rel="stylesheet"
@@ -21,31 +22,30 @@
   </head>
   <body>
     <div class="pomodoro-timer-container">
-      <h1 id="mainHeader">Pomodoro Timer</h1>
+     
       <ion-icon name="menu" id="menuIcon"></ion-icon>
       
-      
-      <div class="pomodoro-clock">
-        
-
+      <h1 id="mainHeader">Pomodoro Timer</h1>
+      <div class="pomodoro-clock">      
+        <!--Pomodoro clock values-->
         <p id="timeVal"></p>
       </div>
       <br>
       <div class="pomodoro-controls">
         <button
-        id="startButton"
-      ><ion-icon name="play"></ion-icon>Start</button>
+        id="startButton"><ion-icon name="play"></ion-icon>Start</button>
   <button id="pauseButton"><ion-icon name="pause"></ion-icon>Pause</button>
   <button class="pomodoro-reset-button" id="resetButton"><ion-icon name="refresh"></ion-icon>Reset</button>
+  <button class="pomodoro-break-button" id="breakButton">Break</button>
   
-  </div>
-  <h3 class="timer-selection-header">Select an interval:</h3>
-  <div class="timer-selection">    
-    <input type="radio">25 Minutes</>
-    <input type="radio">45 Minutes</>
-    <input type="radio">71 Minutes</></div>
+      </div>
+      <div class="pomodoro-counts">
+        Total Pomodoro Cycles:<p id="totalPomodoros">
+      </div>
   
   
   </body>
   <footer>Coded by Warcholak Labs 2023 &copy;</footer>
+  <a href="https://github.com/builtByJava" id="gitHubLink" target="_blank" style="font-size: 30px; color: white;">
+    <br>visit us at: &nbsp;<i class="fa fa-github"></i></a>
 </html>

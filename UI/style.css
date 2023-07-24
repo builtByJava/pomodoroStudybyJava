@@ -9,11 +9,9 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 #mainHeader {
-  position: relative;
-  margin-top: 80px;
-  right: 150px;
+  position: absolute;
+  margin-left: 340px;
   color: white;
   font-weight: bold;
 }
@@ -22,6 +20,12 @@ body {
   position: relative;
   top: 30px;
   left: 250px;
+}
+
+#gitHubLink {
+  position: absolute;
+  top: 570px;
+  left: 600px;
 }
 
 footer {
@@ -50,30 +54,45 @@ footer {
 }
 
 .pomodoro-clock {
-  position: relative;
-  top: 140px;
+  position: absolute;
+  top: 110px;
   background-color: white;
   margin-right: 500px;
   margin-left: 500px;
   border-radius: 10px;
   width: 350px;
 }
-.pomodoro-controls {
-  margin-left: 500px;
-  border: 1px solid red;
-  border-radius: 10px;
-  padding: 40px 30px;
-  margin-right: 500px;
+.pomodoro-counts {
   position: absolute;
-  top: 300px;
+  display: flex;
+  left: 450px;
+  top: 400px;
+  gap: 20px;
+  font-family: Lobster, sans-serif;
+  color: white;
+  font-weight: bold;
+  font-size: 50px;
+}
+.pomodoro-controls {
+  border-radius: 10px;
+  position: absolute;
+  top: 170px;
+  margin-top: 50px;
+  margin-left: 480px;
+  border: 1px solid red;
+  padding: 10px 10px;
+  background-color: whitesmoke;
 }
 .pomodoro-controls button {
   background-color: red;
   color: white;
   font-weight: bold;
   border-radius: 5px;
-  display: inline;
-  padding: 16px 16px;
+  display: flexbox;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
 .pomodoro-controls h3 {
@@ -97,6 +116,10 @@ footer {
   justify-content: center;
   align-items: center;
   color: black;
+}
+
+#breakButton {
+  background-color: green;
 }
 
 #mainHeader {

@@ -1,10 +1,14 @@
 //variables
-let seconds = 1500;
+let seconds = 0;
 let interval = null;
+let totalPSessions = 0;
+let sessionCount = 0;
 
 const startButton = document.querySelector("#startButton");
 const pauseButton = document.querySelector("#pauseButton");
 const resetButton = document.querySelector("#resetButton");
+const takeBreak = document.querySelector("#breakButton");
+const totalSessions = document.querySelector("#totalPomodoros");
 
 //functions
 
@@ -20,15 +24,25 @@ function countdown() {
   //clock starts
   seconds--;
 
-  if (seconds <= 0) {
+  if (seconds < 0) {
     //if time ends
-    seconds = 300; //5min break
+    //if total Pomodoro sessions are more than 4 , then restart cycle count
+    if (totalPSessions >= 4) {
+      totalPSessions = 0;
+    } else {
+      //after each 25 min cycle, store the count. Based on the count it will determine the break number
+      totalPSessions += sessionCount + 1;
+    }
+    //display on UI total pomodoro sessions
+    totalPomodoros.innerText = totalPSessions;
+    clearInterval(interval);
   }
 }
 
 //event listeners
 startButton.addEventListener("click", function () {
-  //start clock by calling countdown method
+  //start clock by calling countdown method, each session -- 25 mins
+  seconds = 1500; //25 min session
   interval = setInterval(countdown, 1000);
 });
 
@@ -40,4 +54,16 @@ pauseButton.addEventListener("click", function () {
 resetButton.addEventListener("click", function () {
   seconds = 1500; //resetting to 25 mins
   countdown();
+});
+
+takeBreak.addEventListener("click", function () {
+  //For big break after 4 total pomodoros is a 15 min break
+  if (totalPSessions == 4) {
+    seconds = 900;
+    interval = setInterval(countdown, 1000);
+  } else {
+    //less than 4 pomodoro sessions are individual 5 min breaks
+    seconds = 300;
+    interval = setInterval(countdown, 1000);
+  }
 });
