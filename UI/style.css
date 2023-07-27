@@ -9,43 +9,27 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-#mainHeader {
-  position: absolute;
-  margin-left: 340px;
-  color: white;
-  font-weight: bold;
-}
-#menuIcon {
-  font-size: 40px;
-  position: relative;
-  top: 30px;
-  left: 250px;
-}
 
 #gitHubLink {
   position: absolute;
   top: 570px;
-  left: 600px;
+  left: 900px;
 }
 
-footer {
-  position: relative;
+.pomodoro-timer-container {
+  display: flex;
+  justify-content: center;
 }
 
 .timer-selection {
   font-size: 28px;
   position: absolute;
-  top: 515px;
-  left: 450px;
   color: white;
   font-weight: bold;
 }
 
 .timer-selection-header {
   font-family: "Lobster";
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-size: 60px;
   position: absolute;
   left: 480px;
@@ -55,30 +39,23 @@ footer {
 
 .pomodoro-clock {
   position: absolute;
-  top: 110px;
   background-color: white;
-  margin-right: 500px;
-  margin-left: 500px;
   border-radius: 10px;
   width: 350px;
+  top: 200px;
 }
 .pomodoro-counts {
   position: absolute;
-  display: flex;
-  left: 450px;
   top: 400px;
-  gap: 20px;
   font-family: Lobster, sans-serif;
   color: white;
   font-weight: bold;
-  font-size: 50px;
+  font-size: 40px;
 }
 .pomodoro-controls {
   border-radius: 10px;
   position: absolute;
-  top: 170px;
-  margin-top: 50px;
-  margin-left: 480px;
+  top: 310px;
   border: 1px solid red;
   padding: 10px 10px;
   background-color: whitesmoke;
@@ -88,10 +65,6 @@ footer {
   color: white;
   font-weight: bold;
   border-radius: 5px;
-  display: flexbox;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
   padding: 20px;
 }
 
@@ -124,22 +97,10 @@ footer {
 
 #mainHeader {
   font-family: "Lobster";
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-size: 60px;
   position: absolute;
-  left: 150px;
-}
-
-h3 {
-  position: absolute;
-  top: 300px;
-  left: 740px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   color: white;
-  font-weight: bold;
+  top: 100px;
 }
 
 footer {
@@ -149,5 +110,4 @@ footer {
   font-weight: bold;
   position: absolute;
   top: 570px;
-  left: 450px;
 }
